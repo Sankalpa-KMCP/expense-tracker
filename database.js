@@ -5,7 +5,7 @@ const db = new sqlite3.Database('./expenses.db', (err) => {
     if (err) {
         console.error("Error opening database " + err.message);
     } else {
-        console.log("✅ Connected to the SQLite database.");
+        console.log("Connected to the SQLite database.");
 
         // Create table with the new 'spent_with' column
         db.run(`CREATE TABLE IF NOT EXISTS expenses (
